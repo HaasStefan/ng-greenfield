@@ -54,7 +54,21 @@
       "unitTestRunner": "jest"
     },
     "@nx/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "skipTests": true,
+      "changeDetection": "OnPush",
+      "standalone": true
+    },
+    "@nx/angular:directive": {
+      "standalone": true,
+      "skipTests": true
+    },
+    "@nx/angular:service": {
+      "skipTests": true
+    },
+    "@nx/angular:pipe": {
+      "skipTests": true,
+      "standalone": true
     }
   }
 }

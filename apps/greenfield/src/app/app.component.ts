@@ -1,14 +1,16 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { SkeletonDirective } from '@ng-greenfield/shared/ui-directives';
+import { delay, of } from 'rxjs';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule],
+  imports: [SkeletonDirective, CommonModule, RouterModule],
   selector: 'ng-greenfield-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'greenfield';
+  obs$ = of("hello").pipe(delay(2000));
 }

@@ -1,2 +1,6 @@
-<ng-greenfield-nx-welcome></ng-greenfield-nx-welcome>
+
+<div *ngGreenfieldSkeleton="obs$ | async as content">
+    content: {{ content }}
+</div>
+
 <router-outlet></router-outlet>

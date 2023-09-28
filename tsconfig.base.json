@@ -16,8 +16,13 @@
     "baseUrl": ".",
     "paths": {
       "@ng-greenfield/ddd": ["libs/plugins/ddd/src/index.ts"],
-      "ddd": ["libs/plugins/ddd/src/index.ts"],
-
+      "@ng-greenfield/shared/ui-directives": [
+        "libs/shared/ui-directives/src/index.ts"
+      ],
+      "@ng-greenfield/shared/utils-primeng": [
+        "libs/shared/utils-primeng/src/index.ts"
+      ],
+      "ddd": ["libs/plugins/ddd/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
